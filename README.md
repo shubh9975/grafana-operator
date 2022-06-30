@@ -44,3 +44,10 @@ You can configure th|operator.updateStrategy.type|Set up update strategy for Gra
 |operator.serviceAccount.name|The name of the service account to use. If not set and create is true, a name is generated using the fullname template|string|""|
 |operator.serviceAccount.annotations|Add annotations|string|{}|
 |operator.serviceAccount.automountServiceAccountToken|Automount API credentials for a service account.|string|true|
+|operator.podSecurityContext.enabled|Enable pods security context|string|true|
+|operator.podSecurityContext.runAsUser|User ID for the pods|integer|1001|
+|operator.podSecurityContext.runAsGroup|User ID for the pods|integer|1001|
+|operator.podSecurityContext.runAsNonRoot|Grafana Operator must run as nonRoot|string|true|
+|operator.podSecurityContext.fsGroup|Group ID for the pods|integer|1001|
+|operator.podSecurityContext.supplementalGroups|Which group IDs containers add|string|[]|
+|
