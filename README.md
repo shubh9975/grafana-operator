@@ -50,4 +50,11 @@ You can configure th|operator.updateStrategy.type|Set up update strategy for Gra
 |operator.podSecurityContext.runAsNonRoot|Grafana Operator must run as nonRoot|string|true|
 |operator.podSecurityContext.fsGroup|Group ID for the pods|integer|1001|
 |operator.podSecurityContext.supplementalGroups|Which group IDs containers add|string|[]|
+|operator.containerSecurityContext.enabled|Enable container security context|string|true|
+|operator.containerSecurityContext.runAsUser|User ID for the operator container|integer|1001|
+|operator.containerSecurityContext.runAsGroup|User ID for the operator container|integer|1001|
+|operator.containerSecurityContext.runAsNonRoot|Force the container to be run as non-root|string|true|
+|operator.containerSecurityContext.privileged|Decide if the container runs privileged.|string|false|
+|operator.containerSecurityContext.readOnlyRootFilesystem|ReadOnlyRootFilesystem fot the operator container|string|false|
+|operator.containerSecurityContext.allowPrivilegeEscalation|Allow Privilege Escalation for the operator container|string|false|
 |
