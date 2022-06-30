@@ -57,4 +57,15 @@ You can configure th|operator.updateStrategy.type|Set up update strategy for Gra
 |operator.containerSecurityContext.privileged|Decide if the container runs privileged.|string|false|
 |operator.containerSecurityContext.readOnlyRootFilesystem|ReadOnlyRootFilesystem fot the operator container|string|false|
 |operator.containerSecurityContext.allowPrivilegeEscalation|Allow Privilege Escalation for the operator container|string|false|
+|operator.resources|Container resource requests and limits|string|{}|
+|operator.containerPorts.metrics|Grafana Operator container port (used for metrics)|integer|8080|
+|operator.hostAliases|Add deployment host aliases|string|[]|
+|operator.extraEnvVars|Array with extra environment variables to add to RabbitMQ Cluster Operator nodes|string|[]|
+|operator.extraEnvVarsCM|Name of existing ConfigMap containing extra env vars for RabbitMQ Cluster Operator nodes|string|""|
+|operator.extraEnvVarsSecret|Name of existing Secret containing extra env vars for RabbitMQ Cluster Operator nodes|string|""|
+|operator.podAffinityPreset|Pod affinity preset|string|""|
+|operator.podAntiAffinityPreset|Pod anti-affinity preset. Allowed values: soft or hard|string|soft|
+|operator.nodeAffinityPreset.type|Node affinity preset type. Allowed values: soft or hard|string|""|
+|operator.nodeAffinityPreset.key|Set nodeAffinity preset key|string|""|
+|operator.nodeAffinityPreset.values|Set nodeAffinity preset values|string|[]|
 |
