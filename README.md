@@ -68,4 +68,24 @@ You can configure th|operator.updateStrategy.type|Set up update strategy for Gra
 |operator.nodeAffinityPreset.type|Node affinity preset type. Allowed values: soft or hard|string|""|
 |operator.nodeAffinityPreset.key|Set nodeAffinity preset key|string|""|
 |operator.nodeAffinityPreset.values|Set nodeAffinity preset values|string|[]|
-|
+|operator.podAnnotations|Pod annotations|string|{}|
+|operator.podLabels|Additional pod labels|string|{}|
+|operator.nodeSelector|Node labels for pod assignment|string|{}|
+|operator.tolerations|Tolerations for controller pod assignment|string|[]|
+|operator.affinity|Affinity for controller pod assignment|string|{}|
+|operator.prometheus.serviceMonitor.enabled|Specify if a ServiceMonitor will be deployed for prometheus-operator|string|false|
+|operator.prometheus.serviceMonitor.namespace|Namespace for the ServiceMonitor Resource (defaults to the Release Namespace)|string|""|
+|operator.prometheus.serviceMonitor.jobLabel|Specify the jobLabel to use for the prometheus-operator|string|app.kubernetes.io/name|
+|operator.prometheus.serviceMonitor.interval|Scrape interval. If not set, the Prometheus default scrape interval is used|string|""|
+|operator.prometheus.serviceMonitor.scrapeTimeout|Timeout after which the scrape is ended|string|""|
+|operator.prometheus.serviceMonitor.metricRelabelings|Specify additional relabeling of metrics|string|[]|
+|operator.prometheus.serviceMonitor.relabelings|Specify general relabeling|string|[]|
+|operator.prometheus.serviceMonitor.selector|ServiceMonitor selector labels|string|{}|
+|operator.prometheus.serviceMonitor.labels|Extra labels for the ServiceMonitor|string|{}|
+|operator.prometheus.serviceMonitor.honorLabels|honorLabels chooses the metric's labels on collisions with target labels|string|false|
+|operator.livenessProbe.enabled|Enable livenessProbe|string|true|
+|operator.livenessProbe.initialDelaySeconds|Initial delay seconds for livenessProbe|integer|10|
+|operator.livenessProbe.periodSeconds|Period seconds for livenessProbe|integer|10|
+|operator.livenessProbe.timeoutSeconds|Timeout seconds for livenessProbe|integer|1|
+|operator.livenessProbe.failureThreshold|Failure threshold for livenessProbe|integer|3|
+|operator.livenessProbe.successThreshold|Success threshold for livenessProbe|integer|1|
